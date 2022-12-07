@@ -1,0 +1,19 @@
+PImage img;
+int x, y,l;
+
+void setup() {
+  size(621, 800);
+  background(255);
+  noStroke();
+  img = loadImage("lady_agnew (1).jpg");
+}
+  
+void draw() {
+  x = round(random(width));
+  y = round(random(height));
+  color c = img.get(x, y);
+  l=int(c)/100000 ;
+  fill(c, 80);
+  ellipse(x, y, l,l);
+//saveFrame();
+}
